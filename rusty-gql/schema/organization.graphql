@@ -1,0 +1,12 @@
+type Organization {
+  id: String!
+  name: String!
+}
+
+input GetByNameInput {
+  name: String!
+}
+
+extend type Query {
+  getByName(input: GetByNameInput): Organization
+}
